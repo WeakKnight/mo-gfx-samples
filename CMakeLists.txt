@@ -1,11 +1,13 @@
-project(mo-gfx-examples)
+project(mo-gfx-samples)
 
 set(
 	BIN_NAME
-	"examples"
+	"mo-gfx-examples"
 )
 
 include_directories(./include)
-file(GLOB SOURCES ./src/*.cpp)
+
+file(GLOB HEADERS "include/*.h")
+file(GLOB SOURCES "./src/*.cpp")
 
 add_executable(${BIN_NAME} ${SOURCES} ${HEADERS})
